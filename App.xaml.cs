@@ -13,5 +13,12 @@ namespace EdgeCef
     /// </summary>
     public partial class App : Application
     {
+        public bool newRuntimeEventHandled = false;
+
+        public App()
+        {
+            InitializeComponent();
+            this.Resources["AdditionalArgs"] = "--enable-features=ThirdPartyStoragePartitioning,PartitionedCookies";
+        }
     }
 }
